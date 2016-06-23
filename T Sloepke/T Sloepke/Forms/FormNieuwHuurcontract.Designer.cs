@@ -43,15 +43,16 @@
             this.tbTussenvoegsel = new System.Windows.Forms.TextBox();
             this.gbVaarplaatsen = new System.Windows.Forms.GroupBox();
             this.nudAantalmeren = new System.Windows.Forms.NumericUpDown();
-            this.lbNoordzee = new System.Windows.Forms.CheckBox();
+            this.cbNoordzee = new System.Windows.Forms.CheckBox();
             this.cbIjsselmeer = new System.Windows.Forms.CheckBox();
             this.lblAantalmeren = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMerenMogelijk = new System.Windows.Forms.Button();
             this.lblMerenMogelijk = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudBudget = new System.Windows.Forms.NumericUpDown();
             this.lblBudget = new System.Windows.Forms.Label();
             this.gbBoot = new System.Windows.Forms.GroupBox();
+            this.lblAradius = new System.Windows.Forms.Label();
             this.btnActieradius = new System.Windows.Forms.Button();
             this.lblBoot = new System.Windows.Forms.Label();
             this.cmbBoot = new System.Windows.Forms.ComboBox();
@@ -73,7 +74,7 @@
             this.gbVaarplaatsen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAantalmeren)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBudget)).BeginInit();
             this.gbBoot.SuspendLayout();
             this.gbArtikelen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudKompas)).BeginInit();
@@ -203,7 +204,7 @@
             // gbVaarplaatsen
             // 
             this.gbVaarplaatsen.Controls.Add(this.nudAantalmeren);
-            this.gbVaarplaatsen.Controls.Add(this.lbNoordzee);
+            this.gbVaarplaatsen.Controls.Add(this.cbNoordzee);
             this.gbVaarplaatsen.Controls.Add(this.cbIjsselmeer);
             this.gbVaarplaatsen.Controls.Add(this.lblAantalmeren);
             this.gbVaarplaatsen.Controls.Add(this.panel1);
@@ -226,15 +227,15 @@
             this.nudAantalmeren.Size = new System.Drawing.Size(56, 20);
             this.nudAantalmeren.TabIndex = 6;
             // 
-            // lbNoordzee
+            // cbNoordzee
             // 
-            this.lbNoordzee.AutoSize = true;
-            this.lbNoordzee.Location = new System.Drawing.Point(27, 181);
-            this.lbNoordzee.Name = "lbNoordzee";
-            this.lbNoordzee.Size = new System.Drawing.Size(72, 17);
-            this.lbNoordzee.TabIndex = 5;
-            this.lbNoordzee.Text = "Noordzee";
-            this.lbNoordzee.UseVisualStyleBackColor = true;
+            this.cbNoordzee.AutoSize = true;
+            this.cbNoordzee.Location = new System.Drawing.Point(27, 181);
+            this.cbNoordzee.Name = "cbNoordzee";
+            this.cbNoordzee.Size = new System.Drawing.Size(72, 17);
+            this.cbNoordzee.TabIndex = 5;
+            this.cbNoordzee.Text = "Noordzee";
+            this.cbNoordzee.UseVisualStyleBackColor = true;
             // 
             // cbIjsselmeer
             // 
@@ -259,7 +260,7 @@
             // 
             this.panel1.Controls.Add(this.btnMerenMogelijk);
             this.panel1.Controls.Add(this.lblMerenMogelijk);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.nudBudget);
             this.panel1.Controls.Add(this.lblBudget);
             this.panel1.Location = new System.Drawing.Point(27, 27);
             this.panel1.Name = "panel1";
@@ -274,6 +275,7 @@
             this.btnMerenMogelijk.TabIndex = 4;
             this.btnMerenMogelijk.Text = "Bereken mogel aantal meren";
             this.btnMerenMogelijk.UseVisualStyleBackColor = true;
+            this.btnMerenMogelijk.Click += new System.EventHandler(this.btnMerenMogelijk_Click);
             // 
             // lblMerenMogelijk
             // 
@@ -284,18 +286,18 @@
             this.lblMerenMogelijk.TabIndex = 2;
             this.lblMerenMogelijk.Text = "Aantal meren mogelijk: 0";
             // 
-            // numericUpDown1
+            // nudBudget
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(53, 12);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudBudget.DecimalPlaces = 2;
+            this.nudBudget.Location = new System.Drawing.Point(53, 12);
+            this.nudBudget.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown1.TabIndex = 1;
+            this.nudBudget.Name = "nudBudget";
+            this.nudBudget.Size = new System.Drawing.Size(110, 20);
+            this.nudBudget.TabIndex = 1;
             // 
             // lblBudget
             // 
@@ -308,6 +310,7 @@
             // 
             // gbBoot
             // 
+            this.gbBoot.Controls.Add(this.lblAradius);
             this.gbBoot.Controls.Add(this.btnActieradius);
             this.gbBoot.Controls.Add(this.lblBoot);
             this.gbBoot.Controls.Add(this.cmbBoot);
@@ -318,6 +321,14 @@
             this.gbBoot.TabStop = false;
             this.gbBoot.Text = "Boot";
             // 
+            // lblAradius
+            // 
+            this.lblAradius.AutoSize = true;
+            this.lblAradius.Location = new System.Drawing.Point(25, 130);
+            this.lblAradius.Name = "lblAradius";
+            this.lblAradius.Size = new System.Drawing.Size(0, 13);
+            this.lblAradius.TabIndex = 24;
+            // 
             // btnActieradius
             // 
             this.btnActieradius.Location = new System.Drawing.Point(74, 88);
@@ -326,6 +337,7 @@
             this.btnActieradius.TabIndex = 4;
             this.btnActieradius.Text = "Actieradius";
             this.btnActieradius.UseVisualStyleBackColor = true;
+            this.btnActieradius.Click += new System.EventHandler(this.btnActieradius_Click);
             // 
             // lblBoot
             // 
@@ -451,6 +463,7 @@
             this.btnBevestigen.TabIndex = 5;
             this.btnBevestigen.Text = "Huurcontract bevestigen";
             this.btnBevestigen.UseVisualStyleBackColor = true;
+            this.btnBevestigen.Click += new System.EventHandler(this.btnBevestigen_Click);
             // 
             // btnAnnuleren
             // 
@@ -493,7 +506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAantalmeren)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBudget)).EndInit();
             this.gbBoot.ResumeLayout(false);
             this.gbBoot.PerformLayout();
             this.gbArtikelen.ResumeLayout(false);
@@ -530,13 +543,13 @@
         private System.Windows.Forms.ComboBox cmbBoot;
         private System.Windows.Forms.Button btnActieradius;
         private System.Windows.Forms.NumericUpDown nudAantalmeren;
-        private System.Windows.Forms.CheckBox lbNoordzee;
+        private System.Windows.Forms.CheckBox cbNoordzee;
         private System.Windows.Forms.CheckBox cbIjsselmeer;
         private System.Windows.Forms.Label lblAantalmeren;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMerenMogelijk;
         private System.Windows.Forms.Label lblMerenMogelijk;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudBudget;
         private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.NumericUpDown nudPeddels;
         private System.Windows.Forms.Label lblPeddels;
@@ -551,5 +564,6 @@
         private System.Windows.Forms.NumericUpDown nudKompas;
         private System.Windows.Forms.Label lblKompas;
         private System.Windows.Forms.Label lblTotaalBedrag;
+        private System.Windows.Forms.Label lblAradius;
     }
 }

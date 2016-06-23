@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace T_Sloepke.Klassen
 {
-    class Motorboot : Boot
+    public interface IProduct
     {
-
-        public Motorboot(int id, string naam, string soort) : base(id, naam, soort)
-        {           
-        }
+        int ID { get; }
+        string Naam { get; }
     }
 }

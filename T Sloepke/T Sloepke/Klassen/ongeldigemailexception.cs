@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace T_Sloepke.Klassen
 {
-    class Motorboot : Boot
+    class ongeldigemailexception : Exception
     {
-
-        public Motorboot(int id, string naam, string soort) : base(id, naam, soort)
-        {           
+        public ongeldigemailexception(string message) : base(message)
+        {
         }
     }
 }

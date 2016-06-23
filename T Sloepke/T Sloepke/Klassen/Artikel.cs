@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T_Sloepke.Klassen
 {
-    public class Artikel
+    public class Artikel : IProduct
     {
         public int ID { get; }
         public string Naam { get; }

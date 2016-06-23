@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T_Sloepke.Klassen
 {
-    abstract public class Boot
+    abstract public class Boot : IProduct
     {
         public int ID { get; }
         public string Naam { get; }

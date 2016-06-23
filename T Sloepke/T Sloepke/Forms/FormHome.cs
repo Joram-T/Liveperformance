@@ -35,7 +35,7 @@ namespace T_Sloepke.Forms
         private void btnNieuw_Click(object sender, EventArgs e)
         {
             this.Hide();
-            nieuwhuurcontract= new FormNieuwHuurcontract();
+            nieuwhuurcontract= new FormNieuwHuurcontract(database);
             nieuwhuurcontract.ShowDialog();
             if (nieuwhuurcontract.DialogResult == DialogResult.OK || nieuwhuurcontract.DialogResult == DialogResult.Cancel)
             {

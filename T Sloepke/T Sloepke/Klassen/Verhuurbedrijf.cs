@@ -19,5 +19,14 @@ namespace T_Sloepke.Klassen
         {
 
         }
+
+        public int BerekenActieradius(int tankinhoud)
+        {
+            int actieradius;
+
+            actieradius = tankinhoud * 15;
+
+            return actieradius;
+        }
     }
 }
