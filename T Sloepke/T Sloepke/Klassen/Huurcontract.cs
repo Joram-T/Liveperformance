@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T_Sloepke.Klassen
 {
-    class Huurcontract
+    public class Huurcontract
     {
         public int ID { get; }
         public DateTime DatumVanaf { get; }

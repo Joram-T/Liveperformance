@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace T_Sloepke
+namespace T_Sloepke.Forms
 {
-    public partial class Form1 : Form
+    public partial class FormNieuwHuurcontract : Form
     {
-        public Form1()
+        public FormNieuwHuurcontract()
         {
             InitializeComponent();
         }
+
+        private void btnAnnuleren_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+    }
     }
 }
